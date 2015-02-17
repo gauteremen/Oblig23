@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import no.uib.gre002.info233.v2015.oblig2.gui.ScreenPane;
 import no.uib.gre002.info233.v2015.oblig2.io.ActivityParser;
@@ -43,7 +44,6 @@ public class CalendarScreenController implements Initializable,
 	@FXML
 	private TableColumn<CalendarPopulator, String> fredagColumn;
 	
-        
 	/**
 	 * Handles the FXML onMouseClicked on the cross symbol
 	 * 
@@ -75,7 +75,11 @@ public class CalendarScreenController implements Initializable,
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-
+		mandagColumn.setCellValueFactory(new PropertyValueFactory<CalendarPopulator, String>("mandagPropery"));
+		tirsdagColumn.setCellValueFactory(new PropertyValueFactory<CalendarPopulator, String>("tirsdagProperty"));
+		onsdagColumn.setCellValueFactory(new PropertyValueFactory<CalendarPopulator, String>("onsdagProperty"));
+		torsdagColumn.setCellValueFactory(new PropertyValueFactory<CalendarPopulator, String>("torsdagProperty"));
+		fredagColumn.setCellValueFactory(new PropertyValueFactory<CalendarPopulator, String>("freddagProperty"));
 	}
 
 	public void setLocationInfo(String building, String room) {
