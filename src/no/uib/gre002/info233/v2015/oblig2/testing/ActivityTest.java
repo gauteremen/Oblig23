@@ -1,6 +1,9 @@
 package no.uib.gre002.info233.v2015.oblig2.testing;
 
 import static org.junit.Assert.assertEquals;
+
+import java.util.Calendar;
+
 import no.uib.gre002.info233.v2015.oblig2.io.ActivityParser;
 import no.uib.gre002.info233.v2015.oblig2.models.Activity;
 
@@ -25,9 +28,13 @@ public class ActivityTest {
 	
 	@Test
 	public void testFirstActivity(){
-		Activity testActivity = parser.getActivityList().get(1);
+		Activity testActivity = parser.getActivityList().get(0);
+		String startTime = testActivity.getBeginTime().get(Calendar.HOUR_OF_DAY) + ":" + testActivity.getBeginTime().get(Calendar.MINUTE);
+		String endTime = testActivity.getEndTime().get(Calendar.HOUR_OF_DAY) + ":" + testActivity.getBeginTime().get(Calendar.MINUTE);
 		assertEquals("ECON110", testActivity.getType());
-		assertEquals("10:15", testActivity.getBeginTime().HOUR_OF_DAY + ":" + testActivity.getBeginTime().MINUTE);
+		assertEquals("Forelesning", testActivity.getDescription());
+		assertEquals("10:15", startTime);
+		assertEquals("12:00", endTime);
 	}
 
 }
