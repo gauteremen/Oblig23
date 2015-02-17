@@ -1,0 +1,47 @@
+.root {
+	-fx-background-image: url("uib.jpg");
+}
+
+#scenetitle {
+    -fx-font-size: 32px;
+    -fx-font-family: "Arial Black";
+    -fx-fill: #818181;
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.7), 6,0.0,0,2);
+}
+
+.label {
+	-fx-font-size: 32px;
+    -fx-font-family: "Arial Black";
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.7), 6,0.0,0,2);
+}
+
+#cross:hover {
+	-fx-opacity: 0.7;
+}
+#cross {
+	-fx-opacity: 0.3;
+}
+
+#arrow {
+	-fx-opacity: 0.3;
+}
+
+#arrow:hover {
+	-fx-opacity: 0.7;
+}
+
+#home {
+	-fx-opacity: 0.3;
+}
+
+#home:hover {
+	-fx-opacity: 0.7;
+}
+
+.logo {
+	-fx-image: url("/images/uib_logo.jpg");
+}
+
+.table-view .column-header-background .label {  
+ -fx-font-size: 9pt;  
+}  
