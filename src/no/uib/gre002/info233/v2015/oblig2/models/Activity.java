@@ -108,11 +108,11 @@ public class Activity implements ActivityInterface, Serializable {
 	}
 
 	/**
-	 * Returns a string description of the activity (Same as getDescription())
+	 * Returns which subject the activity belongs to
 	 */
 	@Override
 	public String getType() {
-		return description;
+		return emne;
 	}
 
 	/**
