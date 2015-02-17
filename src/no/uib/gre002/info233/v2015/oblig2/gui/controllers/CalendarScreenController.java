@@ -43,6 +43,7 @@ public class CalendarScreenController implements Initializable,
 	@FXML
 	private TableColumn<CalendarPopulator, String> fredagColumn;
 	
+        
 	/**
 	 * Handles the FXML onMouseClicked on the cross symbol
 	 * 
